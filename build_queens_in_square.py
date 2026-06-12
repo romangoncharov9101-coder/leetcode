@@ -24,7 +24,7 @@ def find_queens_coordinates(square_line) -> tuple[int, list[tuple]]:
 
             cols.add(col)
             diag1.add(row + col)
-            diag2.add(row - col)
+            diag2.add(row + col)
             board[row] = col
 
             backtracking(row + 1)
