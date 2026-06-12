@@ -28,13 +28,13 @@ def solve_n_queens(square_line):
 
             cols.add(col)
             diag1.add(row - col)
-            diag2.add(row + col)
+            diag2.add(row - col)
             board[row] = col
 
             backtracking(row + 1)
 
             cols.discard(col)
-            diag1.discard(row - col)
+            diag1.discard(row + col)
             diag2.discard(row + col)
             board[row] = -1
         
